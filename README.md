@@ -23,6 +23,7 @@ This is the **Customer Service** for the Food Delivery application.
 ---
 
 ## 🔗 Other Services
+- [Service Registry](https://github.com/saurabhkumarr99/FoodDelivery-ServiceRegistry)  : Acts as Eureka server for service discovery
 - [API Gateway](https://github.com/saurabhkumarr99/FoodDelivery-ApiGateway)  : Acts as the single entry point for all client requests.
 - [Customer Service](https://github.com/saurabhkumarr99/FoodDelivery-CustomerService) : manages customer-related operations.
 - [Menu Service](https://github.com/saurabhkumarr99/FoodDelivery-MenuService)  :  Manages menu items for restaurants
