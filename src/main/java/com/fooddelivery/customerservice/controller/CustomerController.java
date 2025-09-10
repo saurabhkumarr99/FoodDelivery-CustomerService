@@ -46,6 +46,7 @@ public class CustomerController {
 	@PostMapping("/registerCustomer")
 	public ResponseEntity<?> registerCustomer(@Valid @RequestBody Customer customer, BindingResult bindingResult) {
 
+		// Validation happen
 		if (bindingResult.hasErrors()) {
 			Map<String, String> errors = new HashMap<>();
 			for (FieldError error : bindingResult.getFieldErrors()) {
@@ -139,7 +140,7 @@ public class CustomerController {
 			customer = customerService.deleteCustomer(id);
 			logger.info("Customer deleted successfully : " + customer);
 		} catch (CustomerNotFoundException e) {
-			logger.error("--------------------------------------------------------msg : "+e.getLocalizedMessage());
+			logger.error(e.getLocalizedMessage());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("message", e.getLocalizedMessage()));
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(customer);
